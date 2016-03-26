@@ -68,15 +68,15 @@ public class Register {
 		System.out.println("Charge days: " + chargeDays);
 		output[6] = chargeDays + "";
 		double cost = charge.getCost(chargeDays, dCharge);
-		System.out.println("Prediscount charge: $" + cost);
-		output[7] = "" + cost;
+		System.out.println("Prediscount charge: " + charge.moneyFormat2(cost));
+		output[7] = "" + charge.moneyFormat2(cost);
 		System.out.println("Discount: " + input[3] + "%");
 		output[8] = input[3] + "";
 		double discounted = charge.getDiscounted(cost, input[3]);
-		output[9] = "" + discounted;
+		output[9] = charge.moneyFormat2(discounted);
 		double Fcost = charge.getFinalCost(cost, input[3]);
 		System.out.println("Final cost: $" + Fcost);
-		output[10] = Fcost + "";
+		output[10] = charge.moneyFormat2(Fcost);
 		return output;
 	}
     
