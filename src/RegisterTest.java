@@ -33,6 +33,7 @@ public class RegisterTest {
 		String[] rentaltest5 = {"JAKD", "9/3/15", "5", "101"};
 		String[] rentaloutput5={"JAKD", "9/3/15", "5", "101", "Exception"};
 		
+		//should fail here
 		assertArrayEquals(rentaloutput5, register.PointOfSaleTool(rentaltest5));
 		}
 		
