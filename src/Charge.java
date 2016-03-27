@@ -1,6 +1,3 @@
-import java.text.NumberFormat;
-import java.util.Locale;
-
 
 public class Charge {
 
@@ -33,7 +30,7 @@ public class Charge {
 			double dis = Double.parseDouble(discount);
 			double discountamount = (dis/100) * cost;
 			discountamount = moneyFormat(discountamount);
-			System.out.println("Discount: " + moneyFormat2(discountamount));
+			System.out.println("Discount: $" + discountamount);
 			
 			double finalCost = cost - (discountamount);
 			finalCost = Math.round(finalCost * 100);
@@ -49,11 +46,6 @@ public class Charge {
 			return money;
 		}
 
-		public String moneyFormat2(double money){
-			   Locale locale = new Locale("en", "US");      
-			    NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);
-			    return currencyFormatter.format(money);
-		}
 		public double getDiscounted(double cost, String discount) {
 			double dis = Double.parseDouble(discount);
 			double discountamount = (dis/100) * cost;
